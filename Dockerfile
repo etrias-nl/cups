@@ -1,12 +1,15 @@
 FROM ubuntu:bionic
 
+# hadolint ignore=DL3008
 RUN apt-get update -qq && \
     DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends \
         cups printer-driver-cups-pdf && \
-    apt-get clean && find /var/lib/apt/lists -type f -delete
+    rm -rf /var/lib/apt/lists/*
 
 COPY cupsd.conf cups-files.conf /etc/cups/
+COPY docker-entrypoint.d /docker-entrypoint.d/
 
+# hadolint ignore=DL3001
 RUN cupsd -f & pid=$! && \
     while test ! -S /run/cups/cups.sock; do sleep 1; done && \
     lpadmin -p PDF -v cups-pdf:/ -m lsb/usr/cups-pdf/CUPS-PDF_opt.ppd -E && \
