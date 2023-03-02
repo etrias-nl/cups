@@ -17,7 +17,7 @@ if [ -f "${USERFILE}" ]; then
       echo >&3 "Username is empty, skipping"
     else
       echo >&3 "Adding user $username"
-      useradd --no-create-home --no-user-group --groups printing --shell /usr/sbin/nologin "$username"
+      useradd --no-create-home --no-user-group --groups lpadmin --shell /usr/sbin/nologin "$username"
       echo "$username:$password" | chpasswd
     fi;
   done < "$TMPUSERFILE"
