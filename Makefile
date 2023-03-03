@@ -1,4 +1,4 @@
-VERSION=0.2.8
+VERSION=0.2.9
 DOCKER_IMAGE=etriasnl/cups
 DOCKER_PROGRESS?=auto
 MAKEFLAGS += --warn-undefined-variables --always-make
