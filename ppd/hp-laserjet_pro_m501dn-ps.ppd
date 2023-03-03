@@ -128,7 +128,7 @@
 *HPGuidePageExtraTumble: False
 *HPOneCopyOfGuidePage: True
 *HPPaperSizeFeedEdge A5: "long"
-*HPPaperSizeFeedEdge Customized: "userDefined"
+*HPPaperSizeFeedEdge Custom: "userDefined"
 *%cupsUIResolver HPManualDuplexSwitch: " *Duplex None"
 *End
 *HPCustomJobName Title/Job Name: ""
@@ -157,7 +157,7 @@
 *cupsFilter: "application/vnd.cups-postscript 0 hpps"
 *OpenUI *PageSize/Media Size: PickOne
 *OrderDependency: 10 AnySetup *PageSize
-*DefaultPageSize: A4
+*DefaultPageSize: Letter
 *PageSize Letter/US Letter: "<</PageSize[612 792]/ImagingBBox null>>setpagedevice"
 *PageSize Legal/US Legal: "<</PageSize[612 1008]/ImagingBBox null>>setpagedevice"
 *PageSize Executive/Executive: "<</PageSize[522 756]/ImagingBBox null>>setpagedevice"
@@ -184,7 +184,7 @@
 *CloseUI: *PageSize
 *OpenUI *PageRegion/Media Size: PickOne
 *OrderDependency: 10 AnySetup *PageRegion
-*DefaultPageRegion: A4
+*DefaultPageRegion: Letter
 *PageRegion Letter/US Letter: "<</PageSize[612 792]/ImagingBBox null>>setpagedevice"
 *PageRegion Legal/US Legal: "<</PageSize[612 1008]/ImagingBBox null>>setpagedevice"
 *PageRegion Executive/Executive: "<</PageSize[522 756]/ImagingBBox null>>setpagedevice"
@@ -439,7 +439,7 @@
 *da.HPDuplicateJobMode Overwrite/Erstat eksisterende fil: ""
 *da.cupsMarkerName black/Sort: ""
 *da.CustomHPJobName True/CustomHPJobName: ""
-*da.ParamCustomHPJobName Customized/Jobnavn: ""
+*da.ParamCustomHPJobName Custom/Jobnavn: ""
 *da.HPCustomJobName Title/Jobnavn: ""
 *de.Translation Manufacturer/HP: ""
 *de.Translation ModelName/HP LaserJet Pro M501: ""
@@ -523,7 +523,7 @@
 *de.HPDuplicateJobMode Overwrite/Vorhandene Datei ersetzen: ""
 *de.cupsMarkerName black/Schwarz: ""
 *de.CustomHPJobName True/CustomHPJobName: ""
-*de.ParamCustomHPJobName Customized/Jobname: ""
+*de.ParamCustomHPJobName Custom/Jobname: ""
 *de.HPCustomJobName Title/Jobname: ""
 *es.Translation Manufacturer/HP: ""
 *es.Translation ModelName/HP LaserJet Pro M501: ""
@@ -607,7 +607,7 @@
 *es.HPDuplicateJobMode Overwrite/Sustituir el archivo existente: ""
 *es.cupsMarkerName black/Negro: ""
 *es.CustomHPJobName True/CustomHPJobName: ""
-*es.ParamCustomHPJobName Customized/Nombre del trabajo: ""
+*es.ParamCustomHPJobName Custom/Nombre del trabajo: ""
 *es.HPCustomJobName Title/Nombre del trabajo: ""
 *fi.Translation Manufacturer/HP: ""
 *fi.Translation ModelName/HP LaserJet Pro M501: ""
@@ -691,7 +691,7 @@
 *fi.HPDuplicateJobMode Overwrite/Korvaa aiempi tiedosto: ""
 *fi.cupsMarkerName black/Musta: ""
 *fi.CustomHPJobName True/CustomHPJobName: ""
-*fi.ParamCustomHPJobName Customized/Työn nimi: ""
+*fi.ParamCustomHPJobName Custom/Työn nimi: ""
 *fi.HPCustomJobName Title/Työn nimi: ""
 *fr.Translation Manufacturer/HP: ""
 *fr.Translation ModelName/HP LaserJet Pro M501: ""
@@ -775,7 +775,7 @@
 *fr.HPDuplicateJobMode Overwrite/Remplacer le fichier existant: ""
 *fr.cupsMarkerName black/Noir: ""
 *fr.CustomHPJobName True/CustomHPJobName: ""
-*fr.ParamCustomHPJobName Customized/Nom de tâche: ""
+*fr.ParamCustomHPJobName Custom/Nom de tâche: ""
 *fr.HPCustomJobName Title/Nom de tâche: ""
 *it.Translation Manufacturer/HP: ""
 *it.Translation ModelName/HP LaserJet Pro M501: ""
@@ -859,7 +859,7 @@
 *it.HPDuplicateJobMode Overwrite/Sostituisci file esistente: ""
 *it.cupsMarkerName black/Nero: ""
 *it.CustomHPJobName True/CustomHPJobName: ""
-*it.ParamCustomHPJobName Customized/Nome processo: ""
+*it.ParamCustomHPJobName Custom/Nome processo: ""
 *it.HPCustomJobName Title/Nome processo: ""
 *ja.Translation Manufacturer/HP: ""
 *ja.Translation ModelName/HP LaserJet Pro M501: ""
@@ -943,7 +943,7 @@
 *ja.HPDuplicateJobMode Overwrite/既存のファイルを置換: ""
 *ja.cupsMarkerName black/黒: ""
 *ja.CustomHPJobName True/CustomHPJobName: ""
-*ja.ParamCustomHPJobName Customized/ｼﾞｮﾌﾞ名: ""
+*ja.ParamCustomHPJobName Custom/ｼﾞｮﾌﾞ名: ""
 *ja.HPCustomJobName Title/ｼﾞｮﾌﾞ名: ""
 *ko.Translation Manufacturer/HP: ""
 *ko.Translation ModelName/HP LaserJet Pro M501: ""
@@ -1027,7 +1027,7 @@
 *ko.HPDuplicateJobMode Overwrite/기존 파일 바꾸기: ""
 *ko.cupsMarkerName black/검정색: ""
 *ko.CustomHPJobName True/CustomHPJobName: ""
-*ko.ParamCustomHPJobName Customized/작업명: ""
+*ko.ParamCustomHPJobName Custom/작업명: ""
 *ko.HPCustomJobName Title/작업명: ""
 *no.Translation Manufacturer/HP: ""
 *no.Translation ModelName/HP LaserJet Pro M501: ""
@@ -1111,7 +1111,7 @@
 *no.HPDuplicateJobMode Overwrite/Erstatt eksisterende fil: ""
 *no.cupsMarkerName black/Svart: ""
 *no.CustomHPJobName True/CustomHPJobName: ""
-*no.ParamCustomHPJobName Customized/Jobbnavn: ""
+*no.ParamCustomHPJobName Custom/Jobbnavn: ""
 *no.HPCustomJobName Title/Jobbnavn: ""
 *nl.Translation Manufacturer/HP: ""
 *nl.Translation ModelName/HP LaserJet Pro M501: ""
@@ -1195,7 +1195,7 @@
 *nl.HPDuplicateJobMode Overwrite/Bestaand bestand vervangen: ""
 *nl.cupsMarkerName black/Zwart: ""
 *nl.CustomHPJobName True/CustomHPJobName: ""
-*nl.ParamCustomHPJobName Customized/Taaknaam: ""
+*nl.ParamCustomHPJobName Custom/Taaknaam: ""
 *nl.HPCustomJobName Title/Taaknaam: ""
 *pt.Translation Manufacturer/HP: ""
 *pt.Translation ModelName/HP LaserJet Pro M501: ""
@@ -1279,7 +1279,7 @@
 *pt.HPDuplicateJobMode Overwrite/Substituir arquivo existente: ""
 *pt.cupsMarkerName black/Preto: ""
 *pt.CustomHPJobName True/CustomHPJobName: ""
-*pt.ParamCustomHPJobName Customized/Nome do trabalho: ""
+*pt.ParamCustomHPJobName Custom/Nome do trabalho: ""
 *pt.HPCustomJobName Title/Nome do trabalho: ""
 *ru.Translation Manufacturer/HP: ""
 *ru.Translation ModelName/HP LaserJet Pro M501: ""
@@ -1363,7 +1363,7 @@
 *ru.HPDuplicateJobMode Overwrite/Заменить существующий файл: ""
 *ru.cupsMarkerName black/Черный: ""
 *ru.CustomHPJobName True/CustomHPJobName: ""
-*ru.ParamCustomHPJobName Customized/Имя задания: ""
+*ru.ParamCustomHPJobName Custom/Имя задания: ""
 *ru.HPCustomJobName Title/Имя задания: ""
 *sv.Translation Manufacturer/HP: ""
 *sv.Translation ModelName/HP LaserJet Pro M501: ""
@@ -1447,7 +1447,7 @@
 *sv.HPDuplicateJobMode Overwrite/Ersätt befintlig fil: ""
 *sv.cupsMarkerName black/Svart: ""
 *sv.CustomHPJobName True/CustomHPJobName: ""
-*sv.ParamCustomHPJobName Customized/Dokumentnamn: ""
+*sv.ParamCustomHPJobName Custom/Dokumentnamn: ""
 *sv.HPCustomJobName Title/Dokumentnamn: ""
 *zh_CN.Translation Manufacturer/HP: ""
 *zh_CN.Translation ModelName/HP LaserJet Pro M501: ""
@@ -1531,7 +1531,7 @@
 *zh_CN.HPDuplicateJobMode Overwrite/替换现有文件: ""
 *zh_CN.cupsMarkerName black/黑色: ""
 *zh_CN.CustomHPJobName True/CustomHPJobName: ""
-*zh_CN.ParamCustomHPJobName Customized/作业名称: ""
+*zh_CN.ParamCustomHPJobName Custom/作业名称: ""
 *zh_CN.HPCustomJobName Title/作业名称: ""
 *zh_TW.Translation Manufacturer/HP: ""
 *zh_TW.Translation ModelName/HP LaserJet Pro M501: ""
@@ -1615,7 +1615,7 @@
 *zh_TW.HPDuplicateJobMode Overwrite/更換現有檔案: ""
 *zh_TW.cupsMarkerName black/黑色: ""
 *zh_TW.CustomHPJobName True/CustomHPJobName: ""
-*zh_TW.ParamCustomHPJobName Customized/列印工作名稱: ""
+*zh_TW.ParamCustomHPJobName Custom/列印工作名稱: ""
 *zh_TW.HPCustomJobName Title/列印工作名稱: ""
 *DefaultFont: Courier
 *Font Albertus-ExtraBold: Standard "(001.001)" Standard ROM
