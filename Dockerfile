@@ -1,6 +1,5 @@
 FROM ubuntu:bionic
 
-# hadolint ignore=DL3008
 RUN apt-get update -qq && \
     DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends \
         cups printer-driver-cups-pdf hplip jq && \
