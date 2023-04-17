@@ -12,7 +12,7 @@ lint-dockerfile:
 	${exec_docker} hadolint/hadolint hadolint --ignore DL3008 Dockerfile
 lint: lint-yaml lint-dockerfile
 release:
-	git tag "$(shell git describe --tags --abbrev=0 | cut -f1 -d '-')-$$(($(shell git describe --tags --abbrev=0 | cut -f2 -d '-') + 1))"
+	git tag "$(shell docker run --rm alpine/semver semver -i patch "$(shell git describe --tags --abbrev=0)")"
 	git push --tags
 build: lint
 	docker buildx build --progress "${DOCKER_PROGRESS}" --tag "${DOCKER_IMAGE}:$(shell git describe --tags)" .
