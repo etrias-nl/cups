@@ -8,7 +8,7 @@ lint-yaml:
 lint-dockerfile:
 	${exec_docker} hadolint/hadolint hadolint --ignore DL3008 Dockerfile
 lint: lint-yaml lint-dockerfile
-release:
+release: lint
 	git tag "$(shell docker run --rm alpine/semver semver -i patch "$(shell git describe --tags --abbrev=0)")"
 	git push --tags
 build: lint
