@@ -16,7 +16,7 @@ lint: lint-shell-scripts lint-yaml lint-dockerfile
 release: lint
 	@[ "$$(git status --porcelain)" ] && echo "Commit your changes" && exit 1 || true
 	@[ "$$(git log --branches --not --remotes)" ] && echo "Push your commits" && exit 1 || true
-	@git describe --tags --abbrev=0 --exact-match && echo "Commit already tagged" && exit 1 || true
+	@[ "$$(git describe --tags --abbrev=0 --exact-match)" ] && echo "Commit already tagged" && exit 1 || true
 	git tag "$(shell docker run --rm alpine/semver semver -i patch "$(shell git describe --tags --abbrev=0)")"
 	git push --tags
 build: lint
