@@ -3,9 +3,9 @@ name: Docker Build
 'on':
     push:
         tags: [ '*.*.*' ]
-        branches: [ main ]
+        branches: [ master ]
     pull_request:
-        branches: [ main ]
+        branches: [ master ]
 
 env:
     DOCKER_IMAGE: etriasnl/cups
