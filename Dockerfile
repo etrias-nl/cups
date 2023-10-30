@@ -9,7 +9,6 @@ COPY cupsd.conf cups-files.conf /etc/cups/
 COPY docker-entrypoint.d /docker-entrypoint.d/
 COPY ppd/*  /usr/share/ppd/
 
-# hadolint ignore=DL3001
 RUN cupsd -f & pid=$! && \
     while test ! -S /run/cups/cups.sock; do sleep 1; done && \
     lpadmin -p PDF -v cups-pdf:/ -m lsb/usr/cups-pdf/CUPS-PDF_opt.ppd -E && \
