@@ -25,7 +25,7 @@ if ! id "$CUPS_ADMIN_USERNAME" >/dev/null 2>&1; then
     echo "$CUPS_ADMIN_USERNAME:$CUPS_ADMIN_PASSWORD" | chpasswd
 fi
 
-if [[ $CUPS_TLS_ENABLED ]]; then
+if (( $CUPS_TLS_ENABLED )); then
     echo >&3 'Enabeling SSL config'
     cat <<EOT >>  /etc/cups/cupsd.conf
 DefaultEncryption Required
