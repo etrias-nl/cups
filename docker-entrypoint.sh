@@ -45,9 +45,6 @@ EOT
     fi
 fi
 
-
-
-
 sed -i /etc/cups/cupsd.conf -e "s|^LogLevel .*$|LogLevel $CUPS_LOG_LEVEL|"
 chmod 1777 /var/spool/cups-pdf/ANONYMOUS
 
