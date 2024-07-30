@@ -26,19 +26,6 @@ jobs:
                         [registry."docker.io"]
                             mirrors = ["mirror.gcr.io"]
             -
-                id: build
-                uses: docker/build-push-action@v6.5.0
-                with:
-                    context: .
-                    platforms: linux/amd64,linux/arm64
-                    load: true
-                    # https://docs.docker.com/build/ci/github-actions/cache/#github-cache
-                    cache-from: type=gha
-                    cache-to: type=gha,mode=max
-            -
-                run: |
-                    docker run --rm "${{ steps.build.outputs.imageid }}" -t
-            -
                 uses: docker/login-action@v3.3.0
                 with:
                     username: ${{ secrets.DOCKER_HUB_USERNAME }}
@@ -51,10 +38,17 @@ jobs:
                     images: ${{ env.DOCKER_IMAGE }}
                 if: github.ref_type == 'tag'
             -
+                id: build
                 uses: docker/build-push-action@v6.5.0
                 with:
                     context: .
-                    push: true
+                    platforms: linux/amd64,linux/arm64
+                    push: github.ref_type == 'tag'
                     tags: ${{ steps.meta.outputs.tags }}
                     labels: ${{ steps.meta.outputs.labels }}
-                if: github.ref_type == 'tag'
+                    # https://docs.docker.com/build/ci/github-actions/cache/#github-cache
+                    cache-from: type=gha
+                    cache-to: type=gha,mode=max
+            -
+                run: |
+                    docker run --rm "${{ steps.build.outputs.imageid }}" -t
