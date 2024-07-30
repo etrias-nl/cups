@@ -49,3 +49,15 @@ jobs:
                     # https://docs.docker.com/build/ci/github-actions/cache/#github-cache
                     cache-from: type=gha
                     cache-to: type=gha,mode=max
+            -
+                id: build-for-test
+                uses: docker/build-push-action@v6.5.0
+                with:
+                    context: .
+                    load: true
+                    # https://docs.docker.com/build/ci/github-actions/cache/#github-cache
+                    cache-from: type=gha
+                    cache-to: type=gha,mode=max
+            -
+                run: |
+                    docker run --rm "${{ steps.build-for-test.outputs.imageid }}" -t
