@@ -9,6 +9,7 @@ name: Docker Build
 
 env:
     DOCKER_IMAGE: etriasnl/cups
+    DOCKER_DEFAULT_PLATFORM: linux/arm64
 
 jobs:
     build:
