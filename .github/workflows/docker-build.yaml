@@ -21,16 +21,11 @@ jobs:
                 uses: actions/checkout@v4.2.2
             -
                 uses: docker/setup-buildx-action@v3.8.0
-                with:
-                    buildkitd-config-inline: |
-                        [registry."docker.io"]
-                            mirrors = ["mirror.gcr.io"]
             -
                 id: build
                 uses: docker/build-push-action@v6.10.0
                 with:
                     context: .
-                    platforms: linux/arm64
                     load: true
                     # https://docs.docker.com/build/ci/github-actions/cache/#github-cache
                     cache-from: type=gha
