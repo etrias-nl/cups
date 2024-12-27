@@ -15,7 +15,7 @@ git fetch --all --prune --tags --prune-tags --force --quiet
 curr_branch=$(git branch --show-current)
 
 # checkout mainstream, aka current minor
-git checkout master --quiet
+git checkout main --quiet
 git pull --ff-only --quiet
 
 # check version
