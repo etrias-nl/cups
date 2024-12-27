@@ -35,9 +35,9 @@ jobs:
                     # https://docs.docker.com/build/ci/github-actions/cache/#github-cache
                     cache-from: type=gha
                     cache-to: type=gha,mode=max
-             -
-                 run: |
-                     docker run --rm "${{ steps.build.outputs.imageid }}" -t
+            -
+                run: |
+                    docker run --rm "${{ steps.build.outputs.imageid }}" -t
     push:
         needs: [ build ]
         runs-on: ubuntu-latest
